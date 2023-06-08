@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body >
+  <body class="blurred">
     <!-- ============== CABECERA ============ -->
     <header class="header">
-      <!-- grupo de la derecha -->
+      <!-- grupo de la izqda -->
       <div class="header-left">
         <img src="./public/icons/sun.svg" data-current-icon class="weather-icon large"/>
         <div class="header-current-temp">
@@ -505,6 +505,52 @@
       </tr>
     </tbody>
    </table>
-    <script type="module" src="/main.js"></script>
+
+    <template id="day-card-template">
+      <div class="day-card">
+        <img data-icon class="weather-icon">
+        <div class="day-card-day" data-date></div>
+        <div><span data-temp></span><span>&deg;</span></div>
+      </div>
+    </template>
+
+    <template id="hour-row-template">
+      <tr class="hour-row">
+        <td>
+          <div class="info-group">
+            <div class="label" data-date></div>
+            <div data-time></div>
+          </div>
+        </td>
+        <td>
+          <img data-icon class="weather-icon">
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Temp</div>
+            <div><span data-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">FL Temp</div>
+            <div><span data-fl-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Wind</div>
+            <div><span data-wind></span><spa class="value-sub-info">mph</spa></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Precip</div>
+            <div><span data-precip></span><spa class="value-sub-info">in</spa></div>
+          </div>
+        </td>
+      </tr>
+    </template>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
